@@ -1,24 +1,31 @@
-{{ partial "header_before.html" . }}
-{{ partial "header_after.html" . }}
+<!DOCTYPE html>
+<html>
+  {{ partial "head.html" . }}
+  <body>
+    {{ partial "navbar.html" . }}
 
-<div class="container">
-  <div class="row">
-    <div class="col-md-9">
+    <div class="container">
+      <div class="row">
+        <div class="col-md-9">
 
-      <h1 class="p-page-title">{{ .Title }}</h1>
+          <h1 class="p-page-title">{{ .Title }}</h1>
 
-      <ul class="h-inline">
-        {{ range $key, $value := .Data.Terms }}<li><a href="/{{ $.Data.Plural }}/{{ $key | urlize }}/" class="{{ $.Data.Singular }}">{{ $key }}</a></li>{{ end }}
-      </ul>
+          <ul class="h-inline">
+            {{ range $key, $value := .Data.Terms }}<li><a href="/{{ $.Data.Plural }}/{{ $key | urlize }}/" class="{{ $.Data.Singular }}">{{ $key }}</a></li>{{ end }}
+          </ul>
+
+        </div>
+
+        <div class="col-md-3">
+          {{ partial "sidebar.html" . }}
+        </div>
+
+      </div>
 
     </div>
 
-    <div class="col-md-3">
-      {{ partial "sidebar.html" . }}
-    </div>
+    {{ partial "footer.html" . }}
+    {{ partial "body_last_scripts.html" . }}
 
-  </div>
-
-</div>
-
-{{ partial "footer.html" . }}
+  </body>
+</html>

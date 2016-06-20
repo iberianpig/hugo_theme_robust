@@ -55,4 +55,10 @@
   </section>
   {{ end }}
 
+  <section>
+    <header>{{ .Site.Params.author  }}</header>
+    <div>{{ .Site.Params.description }}</div>
+  </section>
+  {{ partial "twitter_timeline.html" . }}
+
 </aside>
