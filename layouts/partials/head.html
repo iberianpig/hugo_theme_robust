@@ -28,12 +28,18 @@
   <meta property="og:url" content="{{ .Permalink }}">
   {{ with .Description }}<meta name="description" content="{{ . }}">{{ end }}
   {{ with .Params.image }}<meta property="og:image" content="{{ . }}">{{ end }}
+
+  <meta name="twitter:card" content="summary" />
+  {{ with .Params.twitterId }}<meta name="twitter:site"    content="@{{ . }}" />{{ end }}
+  {{ with .Params.twitterId }}<meta name="twitter:creator" content="@{{ . }}" />{{ end }}
+
+
   {{ if .IsPage }}{{ partial "structure_data_single.html" . }}{{ end }}
 
   <script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
   <script>
     (adsbygoogle = window.adsbygoogle || []).push({
-      google_ad_client: "ca-pub-4578444047174224",
+      google_ad_client: "{{ .Params.GoogleAdsenseId }}",
       enable_page_level_ads: true
     });
   </script>
