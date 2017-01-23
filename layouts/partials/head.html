@@ -19,15 +19,14 @@
   <title>{{ .Title }}</title>
   <meta property='og:title' content="{{ .Title }}">
   <meta property="og:type" content="website">
+  {{ with .Site.Params.description  }}<meta name="description" content="{{ . }}">{{ end }}
   {{ else }}
   <title>{{ .Title }} - {{ .Site.Title }}</title>
   <meta property='og:title' content="{{ .Title }} - {{ .Site.Title }}">
-  <meta property="og:type" content="article">
+  {{ with .Params.description  }}<meta name="description" content="{{ . }}">{{ end }}
   {{ end }}
 
   <meta property="og:url" content="{{ .Permalink }}">
-
-  <meta name="description" content="{{ if (isset .Params "description") }}{{ .Params.description }}{{ else }}{{ .Site.Params.description }}{{ end }}">
 
   <meta property="og:description" content="{{ if (isset .Params "description") }}{{ .Params.description }}{{ else }}{{ .Site.Params.description }}{{ end }}">
 
