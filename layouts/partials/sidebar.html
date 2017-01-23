@@ -36,9 +36,9 @@
   {{ end }}
 
   <section>
-    <header>LatestPosts</header>
+    <header>Latest Posts</header>
     <div>
-      {{ range first 10 .Site.Pages }}
+      {{ range first 5 .Site.Pages }}
       {{ .Render "li" }}
       {{ end }}
     </div>
