@@ -226,9 +226,6 @@ article .date {
 /* Parts:article:li */
 article.li {
   margin-bottom: 1.1rem;
-  /* box-shadow: 0 2px 5px rgba(0,0,0,0.26); */
-  /* border-radius: 2px; */
-  /* background-color: #fefefe; */
 }
 
 article.li .image {
@@ -304,7 +301,6 @@ article.single {
 
 article.single .image {
   min-height: 24rem;
-  /* box-shadow: 0 2px 10px rgba(0,0,0,.2); */
   border-radius: 5px 5px 0 0;
 }
 
