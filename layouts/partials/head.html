@@ -26,12 +26,15 @@
   {{ end }}
 
   <meta property="og:url" content="{{ .Permalink }}">
-  {{ with .Description }}<meta name="description" content="{{ . }}">{{ end }}
-  {{ with .Params.image }}<meta property="og:image" content="{{ . }}">{{ end }}
 
+  <meta name="description" content="{{ if (isset .Params "description") }}{{ .Params.description }}{{ else }}{{ .Site.Params.description }}{{ end }}">
+
+  <meta property="og:description" content="{{ if (isset .Params "description") }}{{ .Params.description }}{{ else }}{{ .Site.Params.description }}{{ end }}">
+
+  <meta property="og:image" content="{{ if (isset .Params "image") }}{{ .Params.image }}{{ else }}'https://secure.gravatar.com/avatar/0cad0568651dbea482d80104ee3bf9b3?size=500'{{ end }}">
   <meta name="twitter:card" content="summary" />
-  {{ with .Params.twitterId }}<meta name="twitter:site"    content="@{{ . }}" />{{ end }}
-  {{ with .Params.twitterId }}<meta name="twitter:creator" content="@{{ . }}" />{{ end }}
+  {{ with .Site.Params.twitterId }}<meta name="twitter:site"    content="@{{ . }}" />{{ end }}
+  {{ with .Site.Params.twitterId }}<meta name="twitter:creator" content="@{{ . }}" />{{ end }}
 
 
   {{ if .IsPage }}{{ partial "structure_data_single.html" . }}{{ end }}
@@ -39,7 +42,7 @@
   <script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
   <script>
     (adsbygoogle = window.adsbygoogle || []).push({
-      google_ad_client: "{{ .Params.GoogleAdsenseId }}",
+      google_ad_client: "{{ .Site.Params.GoogleAdsenseId }}",
       enable_page_level_ads: true
     });
   </script>
