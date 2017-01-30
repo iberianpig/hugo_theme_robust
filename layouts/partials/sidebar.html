@@ -44,6 +44,8 @@
     </div>
   </section>
 
+  {{ partial "adsense/sidebar.html" . }}
+
   {{ range $key, $value := .Site.Taxonomies }}
   <section>
     <header>{{ $key | singularize }}</header>
