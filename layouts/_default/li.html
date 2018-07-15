@@ -3,7 +3,7 @@
     <div class="image" style="background-image: url({{ if (isset .Params "image") }}{{ .Params.image }}{{ else }}{{ $.Site.BaseURL }}/images/default.jpg{{ end }});"></div>
     <footer>
       <div class="date">
-        <time>{{ with .Site.Params.DateForm }}{{ $.Date.Format . }}{{ else }}{{ $.Date.Format "Mon, Jan 2, 2006" }}{{ end }}</time>
+        <div class="time">{{ with .Site.Params.DateForm }}{{ $.Date.Format . }}{{ else }}{{ $.Date.Format "Mon, Jan 2, 2006" }}{{ end }}</div>
       </div>
       <h2 class="title">{{ .Title }}</h2>
     </footer>
