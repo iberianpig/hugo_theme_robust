@@ -6,7 +6,7 @@ date: ""
 comments: true
 tags: 
    - ""
-categories: ""
+category: ""
 image: ""
 ---
 

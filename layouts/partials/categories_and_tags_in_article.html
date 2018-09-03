@@ -1,0 +1,9 @@
+<nav>
+<ul class="terms">
+  {{ with .Params.categories }}<li class="terms--invert"><a href="/categories/{{ .| urlize }}/">{{ . }}</a></li>{{ end }}
+
+  {{ if ne (len .Params.tags) 0 }}
+    {{ with .Params.tags }}{{ range . }}<li><a href="/tags/{{ .| urlize }}/">#{{ . }}</a></li>{{ end }}{{ end }}
+  {{ end }}
+</ul>
+</nav>
