@@ -15,15 +15,12 @@
               <h1>{{ .Title }}</h1>
               {{ partial "categories_and_tags_in_article.html" . }}
               {{ partial "social_buttons.html" . }}
-              {{ partial "adsense/content.html" . }}
               <div class="content">
                 {{ .Content }}
               </div>
+              {{ partial "social_buttons.html" . }}
+              {{ partial "disqus.html" . }}
             </div>
-
-            {{ partial "social_buttons.html" . }}
-            {{ partial "disqus.html" . }}
-
           </article>
 
         </div>

@@ -44,14 +44,12 @@
     </div>
   </section>
 
-  {{ partial "adsense/sidebar.html" . }}
-
   {{ range $key, $value := .Site.Taxonomies }}
   <section>
     <header>{{ $key | singularize }}</header>
     <div>
       <ul>
-        {{ range first 10 $value.ByCount }}<li><a href="{{ $.Site.BaseURL}}{{ $key }}/{{ .Name | urlize }}">{{ .Name }}</a></li>{{ end }}
+        {{ range first 10 $value.ByCount }}<li><a href="/{{ $key }}/{{ .Name | urlize }}/">{{ .Name }}</a></li>{{ end }}
       </ul>
     </div>
   </section>
