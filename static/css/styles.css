@@ -412,12 +412,6 @@ ol.h-inline {
   margin-right: .5rem;
 }
 
-.twitter-timeline {
-  box-shadow: 0 2px 5px rgba(0,0,0,0.26);
-  border-radius: 5px;
-  background-color: #fff;
-}
-
 aside ul {
   list-style: none;
   padding-left: 0;
