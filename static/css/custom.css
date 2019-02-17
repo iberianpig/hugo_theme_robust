@@ -2,3 +2,9 @@ img {
   width: auto;
   max-width: 100%;
 }
+
+.author .author__body {
+  font-size: 0.8rem;
+  line-height: 1.4rem;
+  white-space: pre-line;
+}

@@ -55,9 +55,9 @@
   </section>
   {{ end }}
 
-  <section>
-    <header>{{ .Site.Params.author  }}</header>
-    <div>{{ .Site.Params.description }}</div>
+  <section class="author">
+    <header class="author__header">{{ .Site.Params.author  }}</header>
+    <div class="author__body">{{ .Site.Params.description }}</div>
   </section>
   {{ partial "twitter_timeline.html" . }}
 
