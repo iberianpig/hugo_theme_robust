@@ -10,12 +10,36 @@ html {
 }
 
 body {
-  font-family: 'Noto Sans','Hiragino Kaku Gothic Pro',メイリオ,Meiryo,sans-serif;
+  font-family: system-ui,
+    /* macOS 10.11-10.12 */ -apple-system,
+    /* Windows 6+ */ Segoe UI,
+    /* Android 4+ */ Roboto,
+    /* Ubuntu 10.10+ */ Ubuntu,
+    /* Gnome 3+ */ Cantarell,
+    /* KDE Plasma 5+ */ Noto Sans,
+    /* fallback */ sans-serif,
+    /* macOS emoji */ "Apple Color Emoji",
+    /* Windows emoji */ "Segoe UI Emoji",
+    /* Windows emoji */ "Segoe UI Symbol",
+    /* Linux emoji */ "Noto Color Emoji";
+
   font-size: inherit;
   font-size: inherit;
   color: #090a29;
   line-height: 1rem;
   background-color: #eceff1;
+}
+
+pre, code, kbd, samp {
+  font-family:
+    /* macOS 10.10+ */ Menlo,
+    /* Windows 6+ */ Consolas,
+    /* Android 4+ */ Roboto Mono,
+    /* Ubuntu 10.10+ */ Ubuntu Monospace,
+    /* KDE Plasma 5+ */ Noto Mono,
+    /* KDE Plasma 4+ */ Oxygen Mono,
+    /* Linux/OpenOffice fallback */ Liberation Mono,
+    /* fallback */ monospace;
 }
 
 a {
@@ -392,14 +416,29 @@ article.single .body .content pre code {
 
 article.single .body .content p>code {
   font-size: .9rem;
+  font-weight: bold;
   line-height: 1rem;
-  background-color: #fff;
-  color: #337ab7;
+  background-color: #eee;
+  color: #002b36;
+  border-radius: 4px;
+  padding: 4px 6px;
+  margin: 2px;
 }
 
-article.single .body h1 { margin: 2rem 0 0; font-weight: 700; }
-article.single .body h2 { margin: 2rem 0 0; font-weight: 700; }
-article.single .body h3 { margin: 1rem 0 0; font-weight: 700; }
+article.single .body .content li>code {
+  font-size: .9rem;
+  font-weight: bold;
+  line-height: 1rem;
+  background-color: #eee;
+  color: #002b36;
+  border-radius: 4px;
+  padding: 4px 6px;
+  margin: 2px;
+}
+
+article.single .body h1 { margin: 4rem 0 0; font-weight: 700; }
+article.single .body h2 { margin: 3rem 0 0; font-weight: 700; }
+article.single .body h3 { margin: 2rem 0 0; font-weight: 700; }
 
 /* Helpers */
 ul.h-inline,
