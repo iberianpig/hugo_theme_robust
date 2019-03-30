@@ -27,7 +27,9 @@
 
   <meta property="og:url" content="{{ .Permalink }}">
 
-  <meta property="og:description" content="{{ if (isset .Params "description") }}{{ .Params.description }}{{ else }}{{ .Site.Params.description }}{{ end }}">
+  {{ with .Params.description  }}
+  <meta property="og:description" content="{{ . }}">
+  {{ end }}
 
   <meta property="og:image" content="{{ if (isset .Params "image") }}{{ .Params.image }}{{ else }}'https://secure.gravatar.com/avatar/0cad0568651dbea482d80104ee3bf9b3?size=500'{{ end }}">
   <meta name="twitter:card" content="summary" />
