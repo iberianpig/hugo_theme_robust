@@ -26,7 +26,7 @@ body {
   font-size: inherit;
   font-size: inherit;
   color: #090a29;
-  line-height: 1rem;
+  line-height: 2rem;
   background-color: #eceff1;
 }
 
@@ -57,11 +57,11 @@ p {
 
 ul, ol {
   padding: 0;
-  padding-left: 1.5rem;
+  padding-left: 2rem;
 }
 
 li {
-  line-height: 1.5rem;
+  line-height: 2rem;
 }
 
 img {
@@ -403,6 +403,7 @@ article.single .body .content pre {
 article.single .body .content pre code {
   font-size: .9rem;
   padding: 1rem 2rem;
+  line-height: 1.2rem;
 }
 
 @media (max-width: 768px) {
@@ -436,9 +437,9 @@ article.single .body .content li>code {
   margin: 2px;
 }
 
-article.single .body h1 { margin: 4rem 0 0; font-weight: 700; }
-article.single .body h2 { margin: 3rem 0 0; font-weight: 700; }
-article.single .body h3 { margin: 2rem 0 0; font-weight: 700; }
+article.single .body h1 { margin: 4rem 0 1rem; font-weight: 700; }
+article.single .body h2 { margin: 3rem 0 1rem; font-weight: 700; }
+article.single .body h3 { margin: 2rem 0 1rem; font-weight: 700; }
 
 /* Helpers */
 ul.h-inline,

@@ -13,7 +13,7 @@
             <div class="image" style="background-image: url({{ if (isset .Params "image") }}{{ .Params.image }}{{ else }}{{ $.Site.BaseURL }}/images/default.jpg{{ end }});"></div>
             <div class="body">
               <h1>{{ .Title }}</h1>
-              {{ partial "categories_and_tags_in_article.html" . }}
+              {{ partial "tags_in_article.html" . }}
               {{ partial "social_buttons.html" . }}
               <div class="content">
                 {{ .Content }}

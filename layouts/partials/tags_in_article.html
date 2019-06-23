@@ -1,7 +1,5 @@
 <nav>
 <ul class="terms">
-  {{ with .Params.categories }}<li class="terms--invert"><a href="/categories/{{ .| urlize }}/">{{ . }}</a></li>{{ end }}
-
   {{ with .Params.tags }}
     {{ if ne (len .) 0 }} {{ range . }}<li><a href="/tags/{{ .| urlize }}/">#{{ . }}</a></li>{{ end }}{{ end }}
   {{ end }}
