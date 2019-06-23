@@ -26,7 +26,7 @@ body {
   font-size: inherit;
   font-size: inherit;
   color: #090a29;
-  line-height: 2rem;
+  line-height: 1rem;
   background-color: #eceff1;
 }
 
@@ -61,7 +61,7 @@ ul, ol {
 }
 
 li {
-  line-height: 2rem;
+  line-height: 1rem;
 }
 
 img {
@@ -387,7 +387,11 @@ article.single .body .content a {
 }
 
 article.single .body .content p {
-  margin: 2rem 0;
+  margin: 2rem 0 1rem;
+  line-height: 2rem;
+}
+
+article.single .body .content li {
   line-height: 2rem;
 }
 
