@@ -5,6 +5,15 @@ img {
 
 .author .author__body {
   font-size: 0.8rem;
-  line-height: 1.4rem;
-  white-space: pre-line;
+  line-height: 1.7rem;
+}
+.author .author__contact {
+}
+
+.taxonomies .taxonomies__body {
+
+}
+
+.taxonomies__body > ul > li {
+    line-height: 1.7rem;
 }

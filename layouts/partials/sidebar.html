@@ -45,9 +45,9 @@
   </section>
 
   {{ range $key, $value := .Site.Taxonomies }}
-  <section>
-    <header>{{ $key | singularize }}</header>
-    <div>
+  <section class="taxonomies">
+    <header class="taxonomies__header">{{ $key | singularize }}</header>
+    <div class="taxonomies__body">
       <ul>
         {{ range first 10 $value.ByCount }}<li><a href="/{{ $key }}/{{ .Name | urlize }}/">{{ .Name }}</a></li>{{ end }}
       </ul>
@@ -57,7 +57,17 @@
 
   <section class="author">
     <header class="author__header">{{ .Site.Params.author  }}</header>
-    <div class="author__body">{{ .Site.Params.description }}</div>
+    <div class="author__body">
+      {{ .Site.Params.aboutme }}
+      <div class="author__contact">
+        {{ with .Site.Params.twitterId }}
+          <a target="_blank" href="https://twitter.com/{{.}}">https://twitter.com/{{ . }}</a>
+        {{ end }}
+        {{ with .Site.Params.githubId }}
+          <a target="_blank" href="https://github.com/{{.}}">https://github.com/{{ . }}</a>
+        {{ end }}
+      </div>
+    </div>
   </section>
 
 </aside>

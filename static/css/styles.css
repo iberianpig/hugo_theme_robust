@@ -441,6 +441,26 @@ article.single .body .content li>code {
   margin: 2px;
 }
 
+article.single > .body blockquote {
+position: relative;
+border-left: .25rem solid #333;
+font-size: .8rem;
+padding: .125rem 1rem;
+margin: 1.5rem 0;
+}
+
+@media (max-width: 768px) {
+article.single > .body blockquote {
+font-size: 1rem;
+}
+}
+
+article.single > .body blockquote p {
+margin: .5rem 0;
+line-height: 1rem;
+}
+
+
 article.single .body h1 { margin: 4rem 0 1rem; font-weight: 700; }
 article.single .body h2 { margin: 3rem 0 1rem; font-weight: 700; }
 article.single .body h3 { margin: 2rem 0 1rem; font-weight: 700; }
