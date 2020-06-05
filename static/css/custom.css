@@ -3,11 +3,36 @@ img {
   max-width: 100%;
 }
 
-.author .author__body {
-  font-size: 0.8rem;
+.author > .author__header {
+  color: rgb(61, 89, 107);
+}
+
+.author > .author__body {
+  font-size: .8rem;
   line-height: 1.7rem;
 }
-.author .author__contact {
+
+.aboutme {
+  margin-top: 2rem;
+}
+
+.aboutme > .aboutme__icon {
+  color: rgb(61, 89, 107);
+  padding: 0 .2rem 0 0;
+}
+
+.aboutwork {
+  margin-top: 2rem;
+}
+
+.aboutwork > .aboutwork__icon {
+  color: rgb(61, 89, 107);
+  padding: 0 .2rem 0 0;
+}
+
+.author .contact a {
+  display: block;
+  color: #337ab7;
 }
 
 .taxonomies .taxonomies__body {
@@ -15,5 +40,5 @@ img {
 }
 
 .taxonomies__body > ul > li {
-    line-height: 1.7rem;
+  line-height: 1.7rem;
 }

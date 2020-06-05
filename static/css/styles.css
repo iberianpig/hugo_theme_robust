@@ -24,7 +24,6 @@ body {
     'Segoe UI Symbol',
     'Noto Color Emoji';
   font-size: inherit;
-  font-size: inherit;
   color: #090a29;
   line-height: 1rem;
   background-color: #eceff1;
@@ -107,21 +106,16 @@ h5 { font-size: 1rem; line-height: 2rem; }
 }
 
 #TableOfContents > ul {
-  margin-bottom: 1rem;
   padding-left: 0;
   list-style: none;
 }
 
 #TableOfContents > ul > li {
-  font-weight: 900;
   margin-bottom: 1rem;
+  font-weight: 900;
 }
 
-#TableOfContents > ul ul:first {
-  margin-bottom: .5rem;
-}
-
-#TableOfContents > ul li {
+#TableOfContents > ul > li > ul li {
   margin-bottom: .5rem;
 }
 
@@ -129,6 +123,14 @@ h5 { font-size: 1rem; line-height: 2rem; }
   padding-left: 0;
   font-weight: normal;
   list-style: none;
+}
+
+#TableOfContents > ul > li > ul > li:first-child {
+  margin-top: .8rem;
+}
+
+#TableOfContents > ul > li > ul > li> ul > li:first-child {
+  margin-top: .8rem;
 }
 
 #TableOfContents > ul ul ul {

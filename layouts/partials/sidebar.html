@@ -56,15 +56,29 @@
   {{ end }}
 
   <section class="author">
-    <header class="author__header">{{ .Site.Params.author  }}</header>
+    <header class="author__header"> About Me</header>
     <div class="author__body">
-      {{ .Site.Params.aboutme }}
-      <div class="author__contact">
-        {{ with .Site.Params.twitterId }}
-          <a target="_blank" href="https://twitter.com/{{.}}">https://twitter.com/{{ . }}</a>
-        {{ end }}
+      <div class="aboutme">
+        <div class="aboutme__icon">
+          <i class="fas fa-piggy-bank fa-lg"> {{ .Site.Params.author  }}</i>
+        </div>
+        {{ .Site.Params.aboutme }}
+      </div>
+      <div class="aboutwork">
+        <div class="aboutwork__icon">
+          <i class="fas fa-briefcase fa-lg"> Work</i>
+        </div>
+        {{ .Site.Params.aboutwork }}
+      </div>
+      <div class="contact">
         {{ with .Site.Params.githubId }}
-          <a target="_blank" href="https://github.com/{{.}}">https://github.com/{{ . }}</a>
+        <a target="_blank" href="https://github.com/{{.}}"><i class="fab fa-github"></i> https://github.com/{{ . }}</a>
+        {{ end }}
+        {{ with .Site.Params.twitterId }}
+        <a target="_blank" href="https://twitter.com/{{.}}"><i class="fab fa-twitter"></i> https://twitter.com/{{ . }}</a>
+        {{ end }}
+        {{ with .Site.Params.email }}
+        <a target="_blank" href="mailto:yhkyky+work@gmail.com"><i class="fas fa-envelope"></i> {{.}}</a>
         {{ end }}
       </div>
     </div>
