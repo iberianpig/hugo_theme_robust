@@ -38,9 +38,11 @@
   <section>
     <header>Latest Posts</header>
     <div>
-      {{ range first 5 .Site.Pages }}
-      {{ .Render "li" }}
-      {{ end }}
+      {{- $recent := first 5 .Site.RegularPages.ByDate.Reverse }}
+      {{- $recent_num := (.Site.Params.widgets.recent_num | default 5) }}
+      {{- range first $recent_num $recent }}
+      {{- .Render "li" }}
+      {{- end }}
     </div>
   </section>
 
