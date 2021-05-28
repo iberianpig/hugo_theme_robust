@@ -395,6 +395,11 @@ article.single aside {
   padding: 0 .5rem;
 }
 
+article.single .publishDate {
+  color: #999;
+  padding-left: 3px;
+}
+
 article.single .body {
   margin: 0 auto;
   margin-bottom: 2rem;

@@ -13,6 +13,12 @@
             <div class="image" style="background-image: url({{ if (isset .Params "image") }}{{ .Params.image }}{{ else }}{{ $.Site.BaseURL }}/images/default.jpg{{ end }});"></div>
             <div class="body">
               <h1>{{ .Title }}</h1>
+
+              <span class="publishDate">
+                Published at <time datetime="{{ dateFormat "2006-01-02T15:04:05-07:00" (default .Date (.PublishDate)) }}">
+                  {{ dateFormat "2 Jan, 2006" (default .Date (.PublishDate)) }}
+                </time>
+              </span>
               {{ partial "tags_in_article.html" . }}
               {{ partial "social_buttons.html" . }}
               <div class="content">
