@@ -4,14 +4,14 @@
     <nav class="p-paging float-right">
     {{ if .Paginator.HasPrev }}
       {{ if eq .Paginator.Prev.PageNumber 1 }}
-        <a href="{{ .URL }}" rel="nofollow">PREV</a>
+        <a href="{{ .RelPermalink }}" rel="nofollow">PREV</a>
       {{ else }}
-        <a href="{{ .URL }}page/{{ .Paginator.Prev.PageNumber }}/" rel="nofollow">PREV</a>
+        <a href="{{ .RelPermalink }}page/{{ .Paginator.Prev.PageNumber }}/" rel="nofollow">PREV</a>
       {{ end }}
     {{ end }}
 
     {{ if .Paginator.HasNext }}
-      <a href="{{ .URL }}page/{{ .Paginator.Next.PageNumber }}/" rel="nofollow">NEXT</a>
+      <a href="{{ .RelPermalink }}page/{{ .Paginator.Next.PageNumber }}/" rel="nofollow">NEXT</a>
     {{ end }}
     </nav>
   </div>
