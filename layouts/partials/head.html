@@ -47,5 +47,10 @@
       enable_page_level_ads: true
     });
   </script>
+
+  {{ if .Site.Params.GoogleAnalyticsUserID }}
+  <script async src="https://www.googletagmanager.com/gtag/js?id={{ .Site.Params.GoogleAnalyticsUserID }}"></script>
+  {{ end }}
+
   <script src="https://kit.fontawesome.com/13953638e7.js"></script>
 </head>
