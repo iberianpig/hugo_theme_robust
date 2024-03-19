@@ -40,6 +40,7 @@
 
   {{ if .IsPage }}{{ partial "structure_data_single.html" . }}{{ end }}
 
+  {{ if .Site.Params.GoogleAdsenseId }}
   <script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
   <script>
     (adsbygoogle = window.adsbygoogle || []).push({
@@ -47,6 +48,7 @@
       enable_page_level_ads: true
     });
   </script>
+  {{ end }}
 
   {{ if .Site.Params.GoogleAnalyticsUserID }}
   <script async src="https://www.googletagmanager.com/gtag/js?id={{ .Site.Params.GoogleAnalyticsUserID }}"></script>
